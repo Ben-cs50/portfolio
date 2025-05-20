@@ -3,7 +3,7 @@ import {
   FaBars,
   FaTimes,
   FaGithub,
-  FaLinkedinIn,
+  FaLinkedin,
 } from 'react-icons/fa';
 import { HiOutlineMail } from 'react-icons/hi';
 import { BsFillPersonLinesFill } from 'react-icons/bs';
@@ -16,7 +16,7 @@ const Navbar = () => {
   return (
     <div className='fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#0a192f] text-gray-300'>
       <div>
-        <h1 className=' font-thin text-2xl italic font-serif'>MO</h1>
+        <h1 data-test="MO-header" className=' font-thin text-2xl italic font-serif'>MO</h1>
       </div>
       {/* menu */}
       <ul className='hidden md:flex gap-x-8'>
