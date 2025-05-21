@@ -1,12 +1,17 @@
-version: 2.1
-orbs:
-  # "cypress-io/cypress@4" installs the latest published
-  # version "s.x.y" of the orb. We recommend you then use
-  # the strict explicit version "cypress-io/cypress@4.x.y"
-  # to lock the version and prevent unexpected CI changes
-  cypress: cypress-io/cypress@4
-workflows:
-  build:
-    jobs:
-      - cypress/run: # "run" job comes from "cypress" orb
-          start-command: 'npm run start'
+name: Cypress Tests
+
+on: push
+
+jobs:
+  cypress-run:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      # Install npm dependencies, cache them correctly
+      # and run all Cypress tests
+      - name: Cypress run
+        uses: cypress-io/github-action@v6
+        with:
+          build: npm run build
+          start: npm start
