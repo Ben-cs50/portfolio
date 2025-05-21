@@ -45,7 +45,7 @@ const Home = () => {
           React, Tailwind, Next.js and Mongodb.
         </p>
         <div>
-          <Link
+          <Link data-test="About-button"
             to="about"
             smooth
             duration={500}

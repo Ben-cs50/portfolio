@@ -25,8 +25,8 @@ const About = () => {
                 look around.
               </p>
             </div>
-            <div> data-test="developer-bio"
-              <p>
+            <div>
+              <p data-test="developer-bio" >
                 Experienced backend developer with expertise in Java, Python, Django, and Delphi.
                 Currently exploring front-end development with a keen interest in React, Node.js, and Tailwind CSS. 
                 Dedicated to crafting efficient solutions and delivering exceptional user experiences. 

@@ -1,6 +1,6 @@
 describe('About form', () => {
     beforeEach(() => {
-        cy.visit('/');
+        cy.visit('/about');
       });
     it('About form exist', () => {
 
@@ -23,10 +23,13 @@ describe('About form', () => {
 
 
             })
-//            it('Bio text should exist', () => {
-//                cy.get('[data-test="developer-bio"]')
-//                .should('be.visible')
-//                .and('contain.text', 'Experienced backend developer with expertise in Java, Python, Django, and Delphi.');
+            it('Bio text should exist', () => {
+                cy.get('[data-test="developer-bio"]')
+                .should('be.visible')
+                .and('contain.text', 'Experienced backend developer with expertise in Java, Python, Django, and Delphi.');
+
+
+                })
 
 
 
